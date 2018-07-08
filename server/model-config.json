@@ -14,7 +14,8 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "db",
+    "public": true
   },
   "AccessToken": {
     "dataSource": "db",
@@ -34,5 +35,13 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Room": {
+    "dataSource": "db",
+    "public": true
+  },
+  "message": {
+    "dataSource": "db",
+    "public": true
   }
 }

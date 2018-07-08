@@ -1,0 +1,5 @@
+<p *ngFor="let room of rooms">
+  <button mat-raised-button	color="primary" style="width:100%" [routerLink]="['/chat', room.id]">
+    {{room.name}}
+  </button> 
+</p>

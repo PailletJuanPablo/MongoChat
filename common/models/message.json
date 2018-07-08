@@ -1,0 +1,44 @@
+{
+  "name": "message",
+  "plural": "messages",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "mixins": {
+    "ContentAuthor": {
+      "authorField": "userId"
+  }
+},
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "content": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "room": {
+      "type": "embedsOne",
+      "model": "Room",
+      "property":"test",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+      "author": {
+        "type": "embedsOne",
+        "model": "User",
+        "property":"userId",
+        "foreignKey": "userId"
+      }
+  },
+  "acls": [],
+  "methods": {}
+}
